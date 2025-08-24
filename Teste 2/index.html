@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 2</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de compras</h1>
+    </header>
+    <section>
+        <div id = "div1">
+            <p>Adicionar item:
+            <input type="text" id = "item" name="item">
+            <input type="button" value="Adicionar" onclick="adicionar()" id="adicionar">
+        </p>
+        <p>Remover item:
+            <input type="text" id ="ritem" name ="ritem">
+            <input type="button" value="Remover" onclick="remover()" id="remover">
+        </p>
+        <p>
+        <input type="button" value ="Limpar lista" onclick="limpar()" id="limpar">  
+        </p>
+        <p>Lista:</p>
+        </div>
+        <div id="res">
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

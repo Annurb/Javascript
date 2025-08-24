@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: rgb(30, 68, 44);
+            color:rgb(231, 246, 116);
+            font: Normal 24pt Times;
+        }
+        body{
+            background-color:antiquewhite;
+            font:Normal 18pt Arial;
+        }
+        input{
+            font:normal 18pt Arial;
+           background-color: rgb(230, 244, 141);
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de verificação de nacionalidade</h1>
+    <p>Digite sua nacionalidade:</p>
+
+    <input type="text" name="nac" id ="nac"> <!--Criação da caixa de texto para que o usuário possa escrever-->
+    <input type="button" value="Ok" onclick="verificar()"><!--Criação de um botão para verificar-->
+    <div id ="res"><p>Resultado</p></div><!--Bloco de texto do resultado-->
+
+    <script>
+        function verificar(){
+            var nac = window.document.getElementById('nac')//Criação de uma variável para manipular a caixa de texto
+            var res = window.document.querySelector('div#res')//Criação de outra variável para manipular a div
+            var naci = String(nac.value)//Criação de uma variável para armazenar o valor em string da caixa de texto
+
+            res.innerHTML = `<p>Sua nacionalidade é ${naci}</p>`//Mostra a nacionalidade do usuário
+             if(naci =='brasileiro'){//Caso a nacionalidade for brasileiro
+                res.innerHTML += `<p>Você é <strong>brasileiro</strong> e tem acesso aos serviços do governo</p>`
+
+             }
+             else{//Bloco caso a nacionalidade não seja brasileira
+                res.innerHTML += `<p>Você é <strong>estrangeiro</strong> e não tem acesso aos serviços do governo</p>` 
+            }
+            res.innerHTML += `Obrigado(a) por usar nossos sistema. Tenha um bom dia!`
+
+            
+        }
+    </script>
+
+</body>
+</html>

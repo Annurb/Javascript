@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dia da semana:</h1>
+    <input type="button" value="Clique aqui para saber" onclick="dia()">
+    <div id="aa"></div>
+
+    <h1>Horário:</h1>
+    <input type ="button" value="Clique aqui para saber" onclick="horario()">
+    <div id ="bb"></div>
+
+    <script>
+        var agora = new Date();
+
+        function dia() {
+            var hoje = document.getElementById('aa');
+
+            var diaSemana = agora.getDay();
+
+            switch (diaSemana){
+                case 0:
+                    diaSemana = ' Domingo';
+                    break;
+                case 1:
+                    diaSemana = ' Segunda-feira';
+                    break;
+                case 2:
+                    diaSemana = ' Terça-feira';
+                    break;
+                case 3:
+                    diaSemana = ' Quarta-feira';
+                    break;
+                case 4:
+                    diaSemana = ' Quinta-feira';
+                    break;
+                case 5:
+                    diaSemana = ' Sexta-feira';
+                    break;
+                case 6:
+                    diaSemana = ' Sábado';
+                    break;
+                default:
+                    diaSemana = ' dia inválido';
+                    break;
+            }
+            hoje.innerText = `Hoje é${diaSemana}`;
+        }
+
+        function horario(){
+            var hora = document.getElementById('bb');
+            var horaAgora = agora.getHours();
+            var minutoAgora = agora.getMinutes();
+            hora.innerHTML = `Agora são ${horaAgora}:${minutoAgora}`;
+        }
+            
+
+
+    </script>
+</body>
+</html>

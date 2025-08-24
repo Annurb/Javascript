@@ -1,0 +1,50 @@
+header{
+    text-align:center;
+    font: Normal 18px Arial;
+    color:rgb(120, 78, 48)
+}
+section{
+    background-color: rgba(99, 85, 65, 0.616);
+    font: Normal 16px Arial;
+    border-radius: 25px;
+    padding: 25px;
+    width: 500px;
+    margin:auto;
+    box-shadow: 5px 5px 10px rgba(39, 46, 139, 0.403);
+}
+div#div1{
+    color:rgb(255, 255, 255);
+}
+div#res{
+    color:aliceblue;
+
+}
+select#lista{
+    width: 465px;
+}
+input{
+    border-radius: 10px;
+    width: 150px;
+
+}
+input#adicionar{
+    border-radius: 10px;
+    width: 100px;
+    height: 20px;
+    background-color: rgb(120, 78, 48);
+    color: white;
+}
+input#remover{
+    border-radius: 10px;
+    width: 100px;
+    height: 20px;
+    background-color: rgb(120, 78, 48);
+    color: white;
+}
+input#limpar{
+    border-radius: 10px;
+    width: 100px;
+    height: 20px;
+    background-color: rgb(120, 78, 48);
+    color: white;
+}
