@@ -28,3 +28,15 @@ document.querySelector('a[title="Java"]')
 //p.append('yeahhh')
 
 //prepend - cria no inicio de um elemento
+
+//h1.after(h3) adiciona um elemento depois do outro
+//tem o before tambem
+
+//nao da pra remover diretsamente
+//portanto fazemos primeiro o pai
+//const ul = firstLi.parentEleemnt
+//ul.removeChild(firstLi)
+//ou b.parentChild.removeChild(b)
+
+//para remover uma imagem é diretamente
+//img.remove()
