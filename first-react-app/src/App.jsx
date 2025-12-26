@@ -4,13 +4,20 @@ import Greeter from "./Greeter"
 import Die from "./Die"
 import ListPicker from "./ListPicker"
 import DoubleDice from "./DoubleDice"
-import "./DoubleDice.css"
 import Heading from "./Heading"
 import ColorList from "./ColorList"
+import ShoppingList from "./ShoppingList.jsx"
 
+const data =[
+  {id:1, item:'eggs', quantity:12, completed: false},
+  {id:2,item:'milk', quantity:1, completed: true},
+  {id:3,item:'chicken breats', quantity:4, completed: false},
+  {id:4,item:'carrots', quantity:6, completed: true}
+]
 function App() {
   return <>
-  <Heading color="magenta" text="Welcome!" fontSize = "20px"/>
+  <ShoppingList items={data}/>
+  {/*<Heading color="magenta" text="Welcome!" fontSize = "20px"/>
   <Heading color="teal" text="blah" fontSize="40px"/>
   <Greeter person="Bill" from="Colt"/>
   <Greeter person="Ted" from="Colt"/>
@@ -23,9 +30,9 @@ function App() {
   <DoubleDice/>
   <DoubleDice/>
   <DoubleDice/>
-  <ColorList colors={['red', 'purple', 'pink', 'teal']}/>
+  <ColorList colors={['red', 'purple', 'pink', 'teal']}/>*/}
     </>
     
 }
 
-export default App
+export default App;
