@@ -10,6 +10,10 @@ import ShoppingList from "./ShoppingList.jsx"
 import Clicker from "./Clicker"
 import Form from "./Form"
 import Clicker1 from "./Clicker1"
+import Counter from "./Counter"
+import Toggler from "./Toggler"
+import './Toggler.css'
+import ToggleCounter from "./ToggleCounter"
 
 const data =[
   {id:1, item:'eggs', quantity:12, completed: false},
@@ -19,6 +23,9 @@ const data =[
 ]
 function App() {
   return <>
+  <ToggleCounter/>
+  <Toggler/>
+  <Counter/>
   <Clicker1 message="Hi!" buttonText="Please Click Me"/>
   <Clicker1 message="Please Stop Clicking me!" buttonText="do not click"/>
   <ShoppingList items={data}/>
