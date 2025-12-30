@@ -2,7 +2,18 @@ import {useState} from 'react'
 export default function ValidatedShoppingListForm({addItem}){
     const [formData, setFormData] = useState({product:"", quantity:0})
     const [productIsValid, setProductIsValid] = useState(false);
+
+    const validate = (product) => {
+        if(product.length === 0){
+            setProductIsValid(false)
+        }else{
+            setProductIsValid(true)
+        }
+    }
     const handleChange = (evt) => {
+        if(evt.target.name === 'product'){
+            validate(evt.target.value);
+        }
         setFormData(currData =>{
             return{
                 ...currData,
@@ -11,9 +22,10 @@ export default function ValidatedShoppingListForm({addItem}){
         })
     }
     const handleSubmit = (e) =>{
+        if(productIsValid){
         e.preventDefault();
         addItem(formData)
-        setFormData({product: "", quantity:0})
+        setFormData({product: "", quantity:0})}
     }
     return(
         <form onSubmit={handleSubmit}>
@@ -25,6 +37,7 @@ export default function ValidatedShoppingListForm({addItem}){
               onChange={handleChange}
               value={formData.product}/>
               <br />
+              {!productIsValid&&(<p style={{color:'red'}}>Product name cannot be empty</p>)}
 
               <label htmlFor="quantity">Quantity</label>
             <input type="number"
@@ -32,7 +45,7 @@ export default function ValidatedShoppingListForm({addItem}){
               id="quantity" 
               onChange={handleChange}
               value={formData.quantity}/>
-              <button>Add item</button>
+              <button disabled={!productIsValid}>Add item</button>
         </form>
     )
 }
