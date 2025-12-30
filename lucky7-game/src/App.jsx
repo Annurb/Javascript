@@ -1,11 +1,25 @@
-import Lucky7 from "./Lucky7";
+import LuckyN from "./LuckyN";
 import Die from './Die';
+import Dice from'./Dice';
+import {sum} from './utils';
+import Button from './Button';
+import BoxGrid from './BoxGrid';
 
+
+function lessThan4(dice){
+  return sum(dice)<4;
+}
+
+function allSameValue(dice){
+  return dice.every((v) => v ===dice[0])
+}
 function App() {
   return (
     <>
-      <Die val={2}/>
-      <Die val={3}/>
+    {/*<LuckyN winCheck={lessThan4} title='Roll less than 4'/> 
+    <LuckyN winCheck={allSameValue} numDice={3} title='Roll the same number'/>*/} 
+      <BoxGrid/>
+
     </>
   );
 }
