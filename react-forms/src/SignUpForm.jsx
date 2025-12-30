@@ -8,6 +8,9 @@ export default function SignUpForm(){
     const updateLastName = (evt) =>{
         setLastName(evt.target.value)
     }
+    const handleSubmit = () =>{
+        console.log(firstName, lastName)
+    }
     return(
         <div>
             <label htmlFor="firstname">Enter a first name: </label>
@@ -23,7 +26,7 @@ export default function SignUpForm(){
             placeholder="lastname" 
             value={lastName} onChange={updateLastName} id='lastname'/>
             <br />
-            <button>Submit</button>
+            <button onClick={handleSubmit}>Submit</button>
         </div>
     )
 }
